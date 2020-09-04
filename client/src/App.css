@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+
+body{
+  background-image: url("https://media.nationalgeographic.org/assets/photos/000/150/15034_c0-4-470-325_r380x260.jpg?d2c55b5d0a457923857ab5a0c480c24379300000");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.container {
+  margin-top: 1.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container input,
+.container ::-webkit-input-placeholder {
+  color: white !important;
+}
+.container input:focus {
+  background-color: transparent;
+  box-shadow: none !important;
+  border: none;
+  border-bottom: 2px solid tomato;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form {
+  margin-top: 3rem;
+}
+
+form input[name="city"],
+form input[name="country"] {
+  background-color: transparent;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  border-radius: 0;
 }

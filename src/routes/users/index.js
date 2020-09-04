@@ -48,7 +48,7 @@ userRouter.post("/register", async(req,res, next)=> {
                  id:user.id
              }
          }
-         jwt.sign(payload,process.env.jwt_Secret, {expiresIn:360000} ,(err,token)=>{
+         jwt.sign(payload, process.env.jwt_Secret, {expiresIn:360000} ,(err,token)=>{
              if(err){
                  throw err
              }else{
@@ -125,7 +125,7 @@ userRouter.post("/login", async(req,res, next)=> {
 // Get loggedin user
 userRouter.get("/", basicAuth, async(req,res,next)=>{
     try{
-        const user = await UsersModel.findById(req.user.id).select ('-password')
+        const user = await UserModel.findById(req.user.id).select ('-password')
         if(user){
         res.json(user);
 
