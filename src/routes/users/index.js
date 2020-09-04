@@ -123,7 +123,7 @@ userRouter.post("/login", async(req,res, next)=> {
 })
 
 // Get loggedin user
-userRouter.get("/", auth, async(req,res,next)=>{
+userRouter.get("/", basicAuth, async(req,res,next)=>{
     try{
         const user = await UsersModel.findById(req.user.id).select ('-password')
         if(user){

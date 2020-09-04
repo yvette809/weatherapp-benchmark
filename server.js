@@ -1,7 +1,7 @@
 const express = require ("express")
 const listEndpoints = require("express-list-endpoints")
 const userRouter = require("./src/routes/users/index")
-const authRouter = require("./src/routes/users/auth")
+
 
 const dotenv = require("dotenv")
 const mongoose = require("mongoose")
@@ -24,11 +24,9 @@ const {
 
 
  server.use("/users", userRouter)
- server.use("/api/auth", authRouter)
- server.use("/api/profile", profileRouter)
- server.use("/api/posts", postRouter)
+ 
 
- server.use(badRequestHandler)
+server.use(badRequestHandler)
 server.use(forbiddenHandler)
 server.use(notFoundHandler)
 server.use(genericErrorHandler)
