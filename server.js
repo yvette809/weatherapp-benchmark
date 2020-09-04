@@ -1,7 +1,7 @@
 const express = require ("express")
 const listEndpoints = require("express-list-endpoints")
 const userRouter = require("./src/routes/users/index")
-
+const cityRouter = require("./src/routes/cities/index")
 
 const dotenv = require("dotenv")
 const mongoose = require("mongoose")
@@ -24,7 +24,7 @@ const {
 
 
  server.use("/users", userRouter)
- 
+ server.use("/", cityRouter)
 
 server.use(badRequestHandler)
 server.use(forbiddenHandler)
